@@ -53,17 +53,21 @@ print("Exemplo de abstração:")
 from abc import ABC, abstractmethod
 
 class Veiculo(ABC):
+    @abstractmethod
     def ligar(self):
         pass
-@abstractmethod
-def ligar(self):
-    pass
-
-def desligar(self):
-    pass
+    @abstractmethod
+    def desligar(self):
+        pass
 
 class Carro(Veiculo):
     def __init__(self):
         pass
-
+    def ligar(self):
+        return "Carro ligado com a chave"
+    def desligar(self):
+        return "Carro desligado usando a chave"
+    
 carro_amarelo = Carro()
+print(carro_amarelo.ligar())
+print(carro_amarelo.desligar())
