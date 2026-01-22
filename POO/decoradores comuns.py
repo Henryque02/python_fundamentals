@@ -37,6 +37,6 @@ class Carro:
         marca, modelo, ano = config.split(",")
         return cls(marca, modelo, ano)
 
-config1 = "Toyota, Corolla,2022"
+config1 = "Toyota,Corolla,2022"
 carro1 = Carro.criar_carro(config1)
 print(f"Marca: {carro1.marca}\nModelo:{carro1.modelo}\nAno: {carro1.ano}")
