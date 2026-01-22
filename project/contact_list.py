@@ -1,58 +1,15 @@
-class Contato:
-    def __init__(self, nome="Novo Contato", telefone, email, favorito=False):
-        self.nome = nome
-        self.telefone = telefone
-        self.email = email
-        self.favorito = favorito
+"""
+() Menu inicial -> O sistema deve exibir um menu com as opções disponíveis da aplicação e permitir que o usuário selecione uma ação por meio de entrada numérica ou textual.
 
-contatos = []
-# Fazer verificação se foi colocado algum número, se o numero tem 9, se não tem
-def adicionar_contato(contatos, nome, telefone, email):
-    novo_contato = Contato(nome, telefone, email)
-    for contato in contatos:
-        if telefone == contato.telefone:
-            print("❌ Esse número já foi salvo anteriormente")
-            return
-    contatos.append(novo_contato)
-    print("Novo contato salvo com sucesso!")
-    
+() Cadastro de contato -> O sistema deve permitir o cadastro de um novo contato com os seguintes campos: nome, telefone, e-mail e status de favorito.
 
-while True:
+() Listagem de contatos -> O sistema deve permitir a visualização da lista completa de contatos cadastrados.
 
-    print("CONTATOS\n".center(80))
-    print("1. Adicionar novo contato")
-    print("2. Ver lista de contatos")
-    print("3. Editar contato")
-    print("4. Marcar/desmarcar contato como favorito")
-    print("5. Ver favoritos")
-    print("6. Apagar contato")
-    print("7. Sair")
+() Edição de contato -> O sistema deve permitir a edição dos dados de um contato previamente cadastrado.
 
-    try:
-        escolha = input("\nDigite uma opção: ")
-        match escolha:
-            case "1":
-                novo_contato_nome = input("Digite o nome do contato: ")
-                novo_contato_telefone = input("Digite o telefone: ")
-                novo_contato_email = input("Digite o email: ")
-                adicionar_contato(contatos, novo_contato_nome, novo_contato_telefone, novo_contato_email)
+() Marcar/desmarcar favorito -> O sistema deve permitir que um contato seja marcado ou desmarcado como favorito.
 
-            case "2":
-                a
-            case "3":
-                
-            case "4":
-                a
-            case "5":
-                a
-            case "6":
-                a
-            case "7":
-                a
-            case _:
-                print("\n❌ Opção inválida! Por favor, digite uma das opções a cima.\n")
+() Listagem de favoritos -> O sistema deve permitir a visualização apenas dos contatos marcados como favoritos.
 
+() Exclusão de contato -> O sistema deve permitir a exclusão de um contato cadastrado."""
 
-
-    except Exception as erro:
-        print(f"Erro: {erro}")
